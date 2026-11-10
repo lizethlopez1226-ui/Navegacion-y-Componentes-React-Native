@@ -25,20 +25,23 @@ export default function Inicio() {
       <View style={estilos.seccion}>
         <Text style={estilos.subtitulo}>Contacto e Interacción</Text>
 
+        {/* Abre directamente el correo para enviar mensaje */}
         <MiBoton
           textoBoton="Enviar Correo"
           nombreIcono="mail"
           colorBoton="#eab308"
-          onPress={() => Alert.alert("Contacto", "Correo: lizethlopez1227@gmail.com")}
+          onPress={() => abrirEnlace("mailto:lizethlopez1227@gmail.com")}
         />
 
+        {/* Abre directamente el marcador telefónico con tu número */}
         <MiBoton
           textoBoton="Llamar"
           nombreIcono="call"
           colorBoton="#2563eb"
-          onPress={() => Alert.alert("Teléfono", "Número: 3028365535")}
+          onPress={() => abrirEnlace("tel:3028365535")}
         />
 
+        {/* Abre tu repositorio de GitHub */}
         <MiBoton
           textoBoton="Ver Repositorio GitHub"
           nombreIcono="logo-github"
