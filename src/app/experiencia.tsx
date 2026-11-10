@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text } from 'react-native';
-import TarjetaExperiencia from '../components/tarjetaExperiencia';
+import TarjetaExperiencia from '../components/TarjetaExperiencia';
 
 export default function Experiencia() {
   return (

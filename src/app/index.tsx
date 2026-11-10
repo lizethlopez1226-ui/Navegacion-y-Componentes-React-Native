@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Alert, Linking, ScrollView, StyleSheet, Text, View } from 'react-native';
-import MiBoton from '../components/miBoton';
+import MiBoton from '../components/MiBoton';
 
 export default function Inicio() {
   const abrirEnlace = (url: string) => {
@@ -29,21 +29,21 @@ export default function Inicio() {
           textoBoton="Enviar Correo"
           nombreIcono="mail"
           colorBoton="#eab308"
-          onPress={() => Alert.alert("Contacto", "Correo: lizeth.lopez@misena.edu.co")}
+          onPress={() => Alert.alert("Contacto", "Correo: lizethlopez1227@gmail.com")}
         />
 
         <MiBoton
           textoBoton="Llamar"
           nombreIcono="call"
           colorBoton="#2563eb"
-          onPress={() => Alert.alert("Teléfono", "Número: +57 300 000 0000")}
+          onPress={() => Alert.alert("Teléfono", "Número: 3028365535")}
         />
 
         <MiBoton
           textoBoton="Ver Repositorio GitHub"
           nombreIcono="logo-github"
           colorBoton="#0f172a"
-          onPress={() => abrirEnlace("https://github.com/LizethLopez")}
+          onPress={() => abrirEnlace("https://github.com/lizethlopez1226-ui/Navegacion-y-Componentes-React-Native.git")}
         />
       </View>
     </ScrollView>
@@ -68,4 +68,3 @@ const estilos = StyleSheet.create({
   subtitulo: { fontSize: 16, fontWeight: "bold", color: "#1e293b", marginBottom: 8 },
   parrafo: { fontSize: 14, color: "#475569", lineHeight: 20 },
 });
-       

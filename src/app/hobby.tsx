@@ -1,30 +1,6 @@
-import React, { useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
-
-type TarjetaHobbyProps = {
-  titulo: string;
-  nombreIcono: string;
-  descripcionDetallada: string;
-};
-
-function TarjetaHobby({ titulo, nombreIcono, descripcionDetallada }: TarjetaHobbyProps) {
-  const [mostrarDetalle, setMostrarDetalle] = useState(false);
-
-  return (
-    <Pressable
-      style={estilos.tarjeta}
-      onPress={() => setMostrarDetalle(!mostrarDetalle)}
-      accessibilityRole="button"
-      accessibilityLabel={`${titulo}. ${mostrarDetalle ? 'Ocultar' : 'Ver'} detalles`}
-    >
-      <View style={estilos.filaTarjeta}>
-        <Text style={estilos.icono}>{nombreIcono}</Text>
-        <Text style={estilos.tituloTarjeta}>{titulo}</Text>
-      </View>
-      {mostrarDetalle && <Text style={estilos.detalle}>{descripcionDetallada}</Text>}
-    </Pressable>
-  );
-}
+import React from 'react';
+import { ScrollView, StyleSheet, Text } from 'react-native';
+import TarjetaHobby from '../components/TargetaHobby';
 
 export default function Hobbies() {
   return (
@@ -64,9 +40,4 @@ const estilos = StyleSheet.create({
   contenido: { padding: 20 },
   encabezado: { fontSize: 18, fontWeight: "bold", color: "#0f172a", marginBottom: 4 },
   instruccion: { fontSize: 13, color: "#64748b", marginBottom: 14 },
-  tarjeta: { backgroundColor: "#ffffff", borderRadius: 12, padding: 16, marginBottom: 12, elevation: 2 },
-  filaTarjeta: { flexDirection: "row", alignItems: "center" },
-  icono: { color: "#2563eb", fontSize: 12, marginRight: 10 },
-  tituloTarjeta: { flex: 1, fontSize: 15, fontWeight: "600", color: "#0f172a" },
-  detalle: { color: "#475569", fontSize: 13, lineHeight: 19, marginTop: 10 },
 });
